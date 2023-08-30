@@ -1,7 +1,7 @@
 function Input({ name, type, placeholder }) {
   return (
-    <div className="m-3 w-2/5">
-      <label className="mx-2" htmlFor={name.toLowerCase()}>
+    <div className="m-3 w-2/5 flex flex-col">
+      <label className="mr-2" htmlFor={name.toLowerCase()}>
         {name}:
       </label>
       <input
