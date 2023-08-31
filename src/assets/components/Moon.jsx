@@ -1,9 +1,9 @@
-function Moon({ color }) {
+function Moon({ color, fill }) {
   return (
     <span className={color}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill="none"
+        fill={fill ? fill : "none"}
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
