@@ -27,7 +27,7 @@ function Form() {
             </select>
           </div>
           <div className="w-2/5 flex justify-center my-5 sm:w-10/12  sm:justify-end">
-            <button className="text-white bg-green-700  border-2 border-green-800 rounded-md p-1">
+            <button className="text-white bg-green-700  border-2 border-green-800 dark:bg-cyan-800 dark:border-cyan-700 rounded-md p-1">
               Add to the List
             </button>
           </div>
