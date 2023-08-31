@@ -15,10 +15,12 @@ function Clock() {
   const minutes = time.getMinutes();
   const seconds = time.getSeconds();
   return (
-    <p className="font-bold text-white">
-      {hours}:{minutes < 10 ? "0" + minutes : minutes}:
-      {seconds < 10 ? "0" + seconds : seconds}
-    </p>
+    <div className="w-16">
+      <p className="font-bold text-white">
+        {hours}:{minutes < 10 ? "0" + minutes : minutes}:
+        {seconds < 10 ? "0" + seconds : seconds}
+      </p>
+    </div>
   );
 }
 

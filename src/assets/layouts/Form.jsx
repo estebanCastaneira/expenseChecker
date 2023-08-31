@@ -5,8 +5,8 @@ function Form() {
   return (
     <>
       <h1 className="text-center text-3xl my-10">Expense Checker</h1>
-      <form>
-        <div className="flex flex-col justify-center items-center sm:flex-row sm:flex-wrap ">
+      <form className="flex justify-center">
+        <div className="flex flex-col justify-center items-center sm:flex-row sm:flex-wrap sm:w-96 md:w-2/3 ">
           <Input name={"Expense"} type={"text"} placeholder={"Ex: Visa..."} />
           <Input name={"Amount"} type={"number"} />
           <Input name={"Expiration"} type={"date"} />
