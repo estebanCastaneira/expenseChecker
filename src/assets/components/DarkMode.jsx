@@ -3,10 +3,11 @@ import Moon from "./Moon";
 import { useState } from "react";
 function DarkMode() {
   const [darkMode, setDarkMode] = useState(false);
+  const [animation, setAnimation] = useState(false);
   const handleOnClik = (e) => {
     const switchWidth = e.currentTarget.offsetWidth;
     const clickX = e.clientX - e.currentTarget.getBoundingClientRect().left;
-    const isLeftHalf = clickX >= switchWidth / 2;
+    const isLeftHalf = clickX <= switchWidth / 2;
     setDarkMode(isLeftHalf);
   };
 
@@ -19,10 +20,19 @@ function DarkMode() {
   return (
     <div
       onClick={(e) => handleOnClik(e)}
-      className="w-24 flex justify-between items-center bg-indigo-700 hover:cursor-pointer hover:brightness-110 rounded-full p-2"
+      className="w-24 flex justify-between items-center bg-orange-200 dark:bg-indigo-800 hover:cursor-pointer hover:brightness-110 rounded-full p-2.5"
     >
-      <Moon color="text-green-500" fill="" />
-      <Sun color="text-green-200" fill="" />
+      {/* <div className="w-7 h-7 bg-white rounded-full absolute opacity-30"></div> */}
+      <Moon
+        color="text-yellow-500"
+        fill={darkMode && "yellow"}
+        classes={!darkMode && ""}
+      />
+      <Sun
+        color="text-yellow-500"
+        fill={!darkMode && "yellow"}
+        classes={darkMode && ""}
+      />
     </div>
   );
 }

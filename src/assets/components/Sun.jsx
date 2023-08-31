@@ -1,6 +1,6 @@
-function Sun({ color, fill }) {
+function Sun({ color, fill, classes }) {
   return (
-    <span className={color}>
+    <span className={`${color} ${classes}`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill={fill ? fill : "none"}

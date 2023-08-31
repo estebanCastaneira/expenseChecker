@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="py-9 bg-orange-200 dark:bg-blue-500 flex flex-col items-center">
+      <main className="py-9 bg-orange-200 dark:bg-indigo-800 dark:text-white flex flex-col items-center">
         <Form />
       </main>
       <Table />

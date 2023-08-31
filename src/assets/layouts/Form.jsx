@@ -4,7 +4,9 @@ function Form() {
   const [expenses, setExpenses] = useState([]);
   return (
     <>
-      <h1 className="text-center text-3xl my-10">Expense Checker</h1>
+      <h1 className="text-center font-semibold text-3xl my-10">
+        Expense Checker
+      </h1>
       <form className="flex justify-center">
         <div className="flex flex-col justify-center items-center sm:flex-row sm:flex-wrap sm:w-96 md:w-2/3 ">
           <Input name={"Expense"} type={"text"} placeholder={"Ex: Visa..."} />
@@ -12,10 +14,14 @@ function Form() {
           <Input name={"Expiration"} type={"date"} />
 
           <div className="m-3 flex flex-col w-2/5">
-            <label className="mr-2" htmlFor="status">
+            <label className="my-2" htmlFor="status">
               Status:
             </label>
-            <select name="status" id="stats" className="p-1 rounded bg-white">
+            <select
+              name="status"
+              id="stats"
+              className="p-2 rounded dark:bg-slate-800"
+            >
               <option value="notPaid">Not Paid</option>
               <option value="paid">Paid</option>
             </select>

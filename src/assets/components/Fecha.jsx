@@ -29,7 +29,7 @@ function Fecha() {
   const dayW = date.getDay();
   return (
     <div>
-      <p className="font-bold text-white">
+      <p className="font-bold dark:text-white">
         {days[dayW].toUpperCase()}, {dayN} {months[month].toUpperCase()}, {year}
       </p>
       {/* <p>

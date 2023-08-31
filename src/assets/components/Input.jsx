@@ -1,7 +1,7 @@
 function Input({ name, type, placeholder }) {
   return (
     <div className="m-3 w-2/5 flex flex-col">
-      <label className="mr-2" htmlFor={name.toLowerCase()}>
+      <label className="my-2" htmlFor={name.toLowerCase()}>
         {name}:
       </label>
       <input
@@ -10,7 +10,7 @@ function Input({ name, type, placeholder }) {
         id={name.toLowerCase()}
         placeholder={placeholder}
         min={0}
-        className="rounded"
+        className="rounded dark:bg-slate-800 p-1.5"
       />
     </div>
   );

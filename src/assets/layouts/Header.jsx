@@ -4,7 +4,7 @@ import DarkMode from "../components/DarkMode";
 import Switcher from "../components/DarkModeToggle";
 function Header() {
   return (
-    <header className="flex justify-between items-center bg-slate-800 p-4">
+    <header className="flex justify-between items-center bg-indigo-300 dark:bg-slate-800 p-4">
       <div>
         <Fecha />
         <Clock />
