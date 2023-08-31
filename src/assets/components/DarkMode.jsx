@@ -1,6 +1,6 @@
 import Sun from "./Sun";
 import Moon from "./Moon";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 function DarkMode() {
   const [darkMode, setDarkMode] = useState(false);
   const handleOnClik = (e) => {
@@ -10,13 +10,12 @@ function DarkMode() {
     setDarkMode(isLeftHalf);
   };
 
-  useEffect(() => {
-    if (darkMode) {
-      window.document.documentElement.classList.add("dark");
-    } else {
-      window.document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
+  if (darkMode) {
+    window.document.documentElement.classList.add("dark");
+  } else {
+    window.document.documentElement.classList.remove("dark");
+  }
+
   return (
     <div
       onClick={(e) => handleOnClik(e)}
