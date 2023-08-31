@@ -7,7 +7,7 @@ function Sun({ color, fill, classes }) {
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="z-0 w-6 h-6 hover:brightness-150"
+        className="z-0 w-6 h-6 hover:brightness-125"
         id="sun"
       >
         <path

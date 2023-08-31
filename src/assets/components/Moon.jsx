@@ -7,7 +7,7 @@ function Moon({ color, fill, classes }) {
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="w-6 h-6 hover:brightness-150"
+        className="w-6 h-6 hover:brightness-125"
       >
         <path
           strokeLinecap="round"
