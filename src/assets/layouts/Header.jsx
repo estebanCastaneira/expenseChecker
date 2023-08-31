@@ -1,6 +1,7 @@
 import Clock from "../components/Clock";
 import Fecha from "../components/Fecha";
 import DarkMode from "../components/DarkMode";
+import Switcher from "../components/DarkModeToggle";
 function Header() {
   return (
     <header className="flex justify-between items-center bg-slate-800 p-4">
@@ -8,7 +9,7 @@ function Header() {
         <Fecha />
         <Clock />
       </div>
-
+      {/* <Switcher /> */}
       <DarkMode />
     </header>
   );
