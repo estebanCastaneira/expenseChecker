@@ -1,13 +1,13 @@
 function Sun({ color, fill, classes }) {
   return (
-    <span className={`${color} ${classes}`}>
+    <span className={`${color} ${classes} transition-all`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill={fill ? fill : "none"}
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="z-0 w-6 h-6 hover:brightness-125"
+        className="z-0 w-6 h-6 hover:brightness-105"
         id="sun"
       >
         <path

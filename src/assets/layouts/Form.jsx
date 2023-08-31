@@ -20,7 +20,7 @@ function Form() {
             <select
               name="status"
               id="stats"
-              className="p-2 rounded dark:bg-slate-800"
+              className="p-2 rounded bg-white dark:bg-slate-800"
             >
               <option value="notPaid">Not Paid</option>
               <option value="paid">Paid</option>
