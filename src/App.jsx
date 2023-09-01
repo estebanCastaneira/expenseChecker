@@ -15,9 +15,9 @@ function App() {
     <>
       <Header />
       <main className="py-9 bg-orange-200 dark:bg-indigo-800 dark:text-white flex flex-col items-center">
-        <Form setExpenses={setExpenses} expenses={expenses} />
+        <Form expenses={expenses} setExpenses={setExpenses} />
       </main>
-      <Table expenses={expenses} />
+      <Table expenses={expenses} setExpenses={setExpenses} />
     </>
   );
 }

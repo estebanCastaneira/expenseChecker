@@ -1,5 +1,13 @@
-import Actions from "../components/Actions";
-function Table({ expenses }) {
+import Edit from "../components/Edit";
+import Delete from "../components/Delete";
+function Table({ expenses, setExpenses }) {
+  const handleDelete = (e, id) => {
+    const expensesUpdate = expenses.filter(
+      (element) => expenses.indexOf(element) !== id
+    );
+    setExpenses([...expensesUpdate]);
+  };
+
   return (
     <table className="w-full table dark:bg-slate-800 dark:text-white border-4 dark:border-gray-600">
       <thead className="table-header-group">
@@ -32,7 +40,7 @@ function Table({ expenses }) {
             className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
             scope="col"
           >
-            Actions
+            <div className="flex justify-evenly">Actions</div>
           </th>
         </tr>
       </thead>
@@ -53,7 +61,10 @@ function Table({ expenses }) {
                 {expense.isPaid ? "Paid" : "Not Paid"}
               </td>
               <td className="table-cell border-2 dark:border-gray-600">
-                <Actions />
+                <div className="flex justify-evenly">
+                  <Edit />
+                  <Delete handleDelete={handleDelete} id={i} />
+                </div>
               </td>
             </tr>
           ))}

@@ -1,9 +1,9 @@
 import Input from "../components/Input";
 import { useState } from "react";
 function Form({ setExpenses, expenses }) {
-  const [expense, setExpense] = useState();
-  const [amount, setAmount] = useState();
-  const [expiration, setExpiration] = useState();
+  const [expense, setExpense] = useState("");
+  const [amount, setAmount] = useState("");
+  const [expiration, setExpiration] = useState("");
   const [isPaid, setIsPaid] = useState(false);
 
   const handleSelect = (e) => {
@@ -12,7 +12,7 @@ function Form({ setExpenses, expenses }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (expense && amount && expiration && isPaid) {
+    if (expense && amount && expiration) {
       setExpenses([...expenses, { expense, amount, expiration, isPaid }]);
       return setExpense(""), setAmount(""), setExpiration(""), setIsPaid(false);
     }
@@ -34,6 +34,7 @@ function Form({ setExpenses, expenses }) {
           <Input
             name={"Amount"}
             type={"number"}
+            placeholder={"Ex: $1000..."}
             setter={setAmount}
             value={amount}
           />
@@ -53,12 +54,13 @@ function Form({ setExpenses, expenses }) {
               id="stats"
               className="p-2 rounded bg-white dark:bg-slate-800"
               onChange={handleSelect}
+              value={isPaid}
             >
               <option value={false}>Not Paid</option>
               <option value={true}>Paid</option>
             </select>
           </div>
-          <div className="w-2/5 flex justify-center my-5 sm:w-10/12  sm:justify-end">
+          <div className="w-2/5 flex justify-center my-5 sm:w-10/12  sm:justify-end transition-all hover:scale-y-95">
             <button
               className="text-white border-2 hover:brightness-110 bg-green-700   border-green-800 dark:bg-cyan-800 dark:border-cyan-700 rounded-md p-1"
               type="submit"
