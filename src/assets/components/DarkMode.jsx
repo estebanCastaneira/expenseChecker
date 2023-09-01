@@ -21,14 +21,14 @@ function DarkMode() {
   return (
     <div
       onClick={(e) => handleOnClik(e)}
-      className="w-24 relative flex justify-between items-center bg-orange-200 dark:bg-indigo-800 hover:cursor-pointer hover:brightness-105 rounded-full p-5"
+      className="w-24 relative flex justify-between items-center bg-orange-400 dark:bg-indigo-800 transition-colors duration-700 hover:cursor-pointer hover:brightness-105 rounded-full p-5"
     >
       <div
         className={`w-8 h-8 rounded-full  absolute  ${
           !darkMode ? "moveR" : "moveL"
         }`}
       ></div>
-      <Moon fill={darkMode ? "yellow" : "#e5e563"} />
+      <Moon fill={darkMode ? "yellow" : "white"} />
       <Sun fill={!darkMode ? "yellow" : "#dea53b"} />
     </div>
   );
