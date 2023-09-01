@@ -1,15 +1,31 @@
 @keyframes moveR{
     from{
-        left: 0px;
-        scale: 10px;
+        left: 5px;
+
     }
     to{
-        left: 1000px;
-        scale: 10px;
+        left: 52px;
+
     }
 }
+@keyframes moveL{
+    from{
+        left: 52px;
 
-.switch {
-    left: 0px;
-    animation: move 2s ease alternate !important;
+    }
+    to{
+        left: 5px;
+
+    }
+}
+.static{
+    left: 5px;
+}
+.moveR {
+
+    animation: moveR 500ms ease forwards;
+}
+.moveL {
+
+    animation: moveL 500ms ease forwards;
 }

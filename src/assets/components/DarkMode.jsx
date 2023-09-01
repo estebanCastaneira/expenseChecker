@@ -4,13 +4,12 @@ import { useState } from "react";
 import "./DarkMode.css";
 function DarkMode() {
   const [darkMode, setDarkMode] = useState(false);
-  const [animation, setAnimation] = useState(true);
+
   const handleOnClik = (e) => {
     const switchWidth = e.currentTarget.offsetWidth;
     const clickX = e.clientX - e.currentTarget.getBoundingClientRect().left;
     const isLeftHalf = clickX <= switchWidth / 2;
     setDarkMode(isLeftHalf);
-    setAnimation(!animation);
   };
 
   if (darkMode) {
@@ -22,11 +21,11 @@ function DarkMode() {
   return (
     <div
       onClick={(e) => handleOnClik(e)}
-      className="w-24 flex justify-between items-center bg-orange-200 dark:bg-indigo-800 hover:cursor-pointer hover:brightness-105 rounded-full p-2.5"
+      className="w-24 relative flex justify-between items-center bg-orange-200 dark:bg-indigo-800 hover:cursor-pointer hover:brightness-105 rounded-full p-2.5"
     >
       <div
-        className={`w-7 h-7 bg-white rounded-full absolute opacity-30  ${
-          !animation ? "switch" : ""
+        className={`w-8 h-8 bg-white rounded-full opacity-30 absolute  ${
+          !darkMode ? "moveR" : "moveL"
         }`}
       ></div>
       <Moon
