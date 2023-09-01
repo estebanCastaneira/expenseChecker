@@ -1,21 +1,21 @@
 @keyframes moveR{
     from{
         left: 4.5px;
-        background-color: #C7D2FE;
+        background-color: #566297;
     }
     to{ 
         left: 54px;
-        background-color: #FEF3C7;
+        background-color: #ffead2;
     }
 }
 @keyframes moveL{
     from{
         left: 54px;
-        background-color: #FEF3C7;
+        background-color: #ffead2;
     }
     to{
         left: 4.5px;
-        background-color: #C7D2FE;
+        background-color: #566297;
     }
 }
 .moveR {
@@ -23,4 +23,7 @@
 }
 .moveL {
     animation: moveL 400ms ease forwards;
+}
+.color{
+    color: #e5e563;
 }

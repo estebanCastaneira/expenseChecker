@@ -10,6 +10,7 @@ function App() {
       "duration-200"
     );
   }, []); // TODO
+
   const [expenses, setExpenses] = useState([]);
   return (
     <>
