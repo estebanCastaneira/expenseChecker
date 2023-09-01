@@ -1,6 +1,9 @@
-function Edit() {
+function Edit({ handleEdit, id }) {
   return (
-    <span className="hover:cursor-pointer  transition-all hover:scale-110">
+    <span
+      onClick={(e) => handleEdit(e, id)}
+      className="hover:cursor-pointer  transition-all hover:scale-110"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

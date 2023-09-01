@@ -2,7 +2,7 @@ function Delete({ handleDelete, id }) {
   return (
     <span
       onClick={(e) => handleDelete(e, id)}
-      className="text-red-800 dark:text-white hover:cursor-pointer hover:brightness-110 transition-all hover:scale-110"
+      className="text-red-800 dark:text-white hover:cursor-pointer hover:brightness-125 transition-all hover:scale-110"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
