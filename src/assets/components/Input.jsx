@@ -1,4 +1,8 @@
-function Input({ name, type, placeholder }) {
+function Input({ name, type, placeholder, value, setter }) {
+  const handleOnChange = (e) => {
+    return setter(e.target.value);
+  };
+
   return (
     <div className="m-3 w-2/5 flex flex-col">
       <label className="my-2" htmlFor={name.toLowerCase()}>
@@ -11,6 +15,7 @@ function Input({ name, type, placeholder }) {
         placeholder={placeholder}
         min={0}
         className="rounded dark:bg-slate-800 p-1.5"
+        onChange={handleOnChange}
       />
     </div>
   );

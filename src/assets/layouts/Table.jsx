@@ -4,52 +4,52 @@ function Table({ expenses }) {
       <thead className="table-header-group">
         <tr>
           <th
-            className="table-cell border-2 bg-indigo-300 dark:bg-slate-800 dark:border-gray-600"
+            className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
             scope="col"
           >
             Expense
           </th>
           <th
-            className="table-cell border-2 bg-indigo-300 dark:bg-slate-800 dark:border-gray-600"
+            className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
             scope="col"
           >
             Amount
           </th>
           <th
-            className="table-cell border-2 bg-indigo-300 dark:bg-slate-800 dark:border-gray-600"
+            className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
             scope="col"
           >
             Expiration
           </th>
           <th
-            className="table-cell border-2 bg-indigo-300 dark:bg-slate-800 dark:border-gray-600"
+            className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
             scope="col"
           >
             Status
           </th>
           <th
-            className="table-cell border-2 bg-indigo-300 dark:bg-slate-800 dark:border-gray-600"
+            className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
             scope="col"
           >
             Actions
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="table-row-group ">
         {expenses &&
-          expenses.map((expense) => (
-            <tr className="table-row-group">
+          expenses.map((expense, i) => (
+            <tr className="text-center" key={i}>
               <td className="table-cell border-2 border-gray-600">
                 {expense.expense}
               </td>
               <td className="table-cell border-2 border-gray-600">
-                {expense.amount}
+                ${expense.amount}
               </td>
               <td className="table-cell border-2 border-gray-600">
                 {expense.expiration}
               </td>
               <td className="table-cell border-2 border-gray-600">
-                {expense.status}
+                {expense.isPaid ? "Paid" : "Not Paid"}
               </td>
               <td className="table-cell border-2 border-gray-600"></td>
             </tr>
