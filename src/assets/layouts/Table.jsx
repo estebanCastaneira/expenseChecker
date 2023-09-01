@@ -1,3 +1,4 @@
+import Actions from "../components/Actions";
 function Table({ expenses }) {
   return (
     <table className="w-full table dark:bg-slate-800 dark:text-white border-4 dark:border-gray-600">
@@ -39,19 +40,21 @@ function Table({ expenses }) {
         {expenses &&
           expenses.map((expense, i) => (
             <tr className="text-center" key={i}>
-              <td className="table-cell border-2 border-gray-600">
+              <td className="table-cell border-2 dark:border-gray-600">
                 {expense.expense}
               </td>
-              <td className="table-cell border-2 border-gray-600">
+              <td className="table-cell border-2 dark:border-gray-600">
                 ${expense.amount}
               </td>
-              <td className="table-cell border-2 border-gray-600">
+              <td className="table-cell border-2 dark:border-gray-600">
                 {expense.expiration}
               </td>
-              <td className="table-cell border-2 border-gray-600">
+              <td className="table-cell border-2 dark:border-gray-600">
                 {expense.isPaid ? "Paid" : "Not Paid"}
               </td>
-              <td className="table-cell border-2 border-gray-600"></td>
+              <td className="table-cell border-2 dark:border-gray-600">
+                <Actions />
+              </td>
             </tr>
           ))}
       </tbody>

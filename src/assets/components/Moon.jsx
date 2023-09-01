@@ -1,9 +1,9 @@
-function Moon({ color, fill, classes }) {
+function Moon({ fill }) {
   return (
-    <span className={`${color} ${classes} transition-all absolute left-2`}>
+    <span className="text-yellow-200 transform scale-100 dark:scale-125 transition-all absolute left-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill={fill ? fill : "none"}
+        fill={fill}
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"

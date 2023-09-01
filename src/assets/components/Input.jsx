@@ -16,6 +16,7 @@ function Input({ name, type, placeholder, value, setter }) {
         min={0}
         className="rounded dark:bg-slate-800 p-1.5"
         onChange={handleOnChange}
+        value={value}
       />
     </div>
   );

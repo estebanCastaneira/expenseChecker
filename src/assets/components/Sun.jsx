@@ -1,9 +1,9 @@
-function Sun({ color, fill, classes }) {
+function Sun({ fill }) {
   return (
-    <span className={`${color} ${classes} transition-all absolute right-2`}>
+    <span className="text-yellow-500 transform scale-125 dark:scale-100 transition-all absolute right-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill={fill ? fill : "none"}
+        fill={fill}
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"

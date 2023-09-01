@@ -28,16 +28,8 @@ function DarkMode() {
           !darkMode ? "moveR" : "moveL"
         }`}
       ></div>
-      <Moon
-        color="text-yellow-200"
-        fill={darkMode ? "yellow" : "white"}
-        classes={darkMode && "transform scale-125"}
-      />
-      <Sun
-        color="text-yellow-500"
-        fill={!darkMode && "yellow"}
-        classes={!darkMode && "transform scale-125"}
-      />
+      <Moon fill={darkMode ? "yellow" : "#ff0000"} />
+      <Sun fill={!darkMode ? "yellow" : "#ff0000"} />
     </div>
   );
 }

@@ -14,9 +14,7 @@ function Form({ setExpenses, expenses }) {
     e.preventDefault();
     if (expense && amount && expiration && isPaid) {
       setExpenses([...expenses, { expense, amount, expiration, isPaid }]);
-      return (
-        setExpense(null), setAmount(null), setExpiration(null), setIsPaid(false)
-      );
+      return setExpense(""), setAmount(""), setExpiration(""), setIsPaid(false);
     }
   };
   return (
