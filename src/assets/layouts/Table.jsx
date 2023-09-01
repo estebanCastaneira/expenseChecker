@@ -21,9 +21,7 @@ function Table({ expenses, setExpenses }) {
       setEditing({ available: false, id: "" });
     }
   };
-  const handlePaid = (e) => {
-    console.log(e);
-  };
+  const handlePaid = (e) => {};
 
   return (
     <table className="w-full table dark:bg-slate-800 dark:text-white border-4 dark:border-gray-600">

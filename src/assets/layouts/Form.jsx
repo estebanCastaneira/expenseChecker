@@ -23,7 +23,7 @@ function Form({ setExpenses, expenses }) {
         Expense Checker
       </h1>
       <form className="flex justify-center" onSubmit={handleSubmit}>
-        <div className="flex flex-col justify-center items-center sm:flex-row sm:flex-wrap sm:w-96 md:w-2/3 ">
+        <div className="flex flex-col w-full justify-center items-center sm:flex-row sm:flex-wrap sm:w-96 md:w-2/3 ">
           <Input
             name={"Expense"}
             type={"text"}
@@ -45,7 +45,7 @@ function Form({ setExpenses, expenses }) {
             value={expiration}
           />
 
-          <div className="m-3 flex flex-col w-2/5">
+          <div className="m-3 flex flex-col w-full md:w-2/5">
             <label className="my-2" htmlFor="status">
               Status:
             </label>
@@ -60,7 +60,7 @@ function Form({ setExpenses, expenses }) {
               <option value={true}>Paid</option>
             </select>
           </div>
-          <div className="w-2/5 flex justify-center my-5 sm:w-10/12  sm:justify-end transition-all hover:scale-y-95">
+          <div className="w-3/5 flex justify-center my-5 sm:w-10/12  sm:justify-end transition-all hover:scale-y-95">
             <button
               className="text-white border-2 hover:brightness-110 bg-green-700   border-green-800 dark:bg-cyan-800 dark:border-cyan-700 rounded-md p-1"
               type="submit"
