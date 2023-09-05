@@ -1,6 +1,6 @@
 function Moon({ fill }) {
   return (
-    <span className="text-yellow-100 transform scale-100 dark:scale-125 transition-all absolute left-2">
+    <span className="text-yellow-400 transform scale-100 dark:scale-125 transition-all absolute left-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill={fill}

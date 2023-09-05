@@ -100,7 +100,11 @@ function Table({ expenses, setExpenses }) {
                 <div className="flex justify-evenly">
                   <Save editing={editing} id={i} />
                   <Edit handleEdit={handleEdit} id={i} />
-                  <Money handlePaid={handlePaid} id={i} />
+                  <Money
+                    handlePaid={handlePaid}
+                    id={i}
+                    isPaid={expense.isPaid}
+                  />
                   <Delete handleDelete={handleDelete} id={i} />
                 </div>
               </td>
