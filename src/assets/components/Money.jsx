@@ -1,11 +1,11 @@
-function Money({ handlePaid, i, isPaid }) {
+function Money({ handlePaid, id, isPaid }) {
   return (
     <span
-      onClick={handlePaid}
+      onClick={(e) => handlePaid(e, id)}
       className={`${
         isPaid
           ? "text-green-600 dark:text-green-500"
-          : "text-green-800 dark:text-green-100"
+          : "text-green-900 dark:text-green-100"
       } hover:cursor-pointer transition-all hover:scale-105 hover:brightness-125`}
     >
       <svg

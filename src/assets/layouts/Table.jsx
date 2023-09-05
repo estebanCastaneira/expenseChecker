@@ -21,7 +21,17 @@ function Table({ expenses, setExpenses }) {
       setEditing({ available: false, id: "" });
     }
   };
-  const handlePaid = (e) => {};
+  const handlePaid = (e, id) => {
+    const expenseUpdate = expenses.map((element, i) => {
+      if (i === id) {
+        element.isPaid = !element.isPaid;
+        return element;
+      } else {
+        return element;
+      }
+    });
+    setExpenses([...expenseUpdate]);
+  };
 
   return (
     <table className="w-full table dark:bg-slate-800 dark:text-white border-4 dark:border-gray-600">
