@@ -1,5 +1,6 @@
 import Input from "../components/Input";
 import { useState } from "react";
+
 function Form({ setExpenses, expenses }) {
   const [expense, setExpense] = useState("");
   const [amount, setAmount] = useState("");
@@ -13,7 +14,15 @@ function Form({ setExpenses, expenses }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (expense && amount && expiration) {
-      setExpenses([...expenses, { expense, amount, expiration, isPaid }]);
+      setExpenses([
+        ...expenses,
+        {
+          expense,
+          amount,
+          expiration: expiration.split("-").reverse().join("-"),
+          isPaid,
+        },
+      ]);
       return setExpense(""), setAmount(""), setExpiration(""), setIsPaid(false);
     }
   };
