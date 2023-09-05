@@ -4,13 +4,6 @@ import Form from "./assets/layouts/Form";
 import Table from "./assets/layouts/Table";
 import { useEffect, useState } from "react";
 function App() {
-  useEffect(() => {
-    window.document.documentElement.classList.add(
-      "transition-color",
-      "duration-200"
-    );
-  }, []); // TODO
-
   const [expenses, setExpenses] = useState([]);
   return (
     <>

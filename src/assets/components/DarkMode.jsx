@@ -14,8 +14,10 @@ function DarkMode() {
 
   if (darkMode) {
     window.document.documentElement.classList.add("dark");
+    window.document.body.classList.add("dark:bg-slate-900");
   } else {
     window.document.documentElement.classList.remove("dark");
+    window.document.body.classList.remove("dark:bg-slate-900");
   }
 
   return (

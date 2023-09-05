@@ -19,13 +19,14 @@ function Form({ setExpenses, expenses }) {
         {
           expense,
           amount,
-          expiration: expiration.split("-").reverse().join("-"),
+          expiration,
           isPaid,
         },
       ]);
       return setExpense(""), setAmount(""), setExpiration(""), setIsPaid(false);
     }
   };
+
   return (
     <>
       <h1 className="text-center font-semibold text-3xl my-10">

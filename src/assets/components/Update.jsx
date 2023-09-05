@@ -1,6 +1,7 @@
-function Save({ editing, id }) {
+function Update({ handleUpdate, editing, id }) {
   return (
     <span
+      onClick={(e) => editing.id === id && handleUpdate(e, id)}
       className={` transition-all  ${
         editing.id === id
           ? "text-lime-500 hover:cursor-pointer hover:brightness-125 hover:scale-110"
@@ -24,4 +25,4 @@ function Save({ editing, id }) {
     </span>
   );
 }
-export default Save;
+export default Update;
