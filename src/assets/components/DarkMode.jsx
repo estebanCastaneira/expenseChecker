@@ -23,7 +23,7 @@ function DarkMode() {
   return (
     <div
       onClick={(e) => handleOnClik(e)}
-      className="w-24 relative flex justify-between items-center bg-gradient-to-t from-yellow-100 via-white to-yellow-100 dark:bg-gradient-to-t dark:from-indigo-900 dark:via-indigo-600 dark:to-indigo-900 hover:cursor-pointer hover:brightness-105 rounded-full p-5"
+      className="w-24 relative flex justify-between items-center bg-gradient-to-t from-yellow-100 via-white to-yellow-100 dark:bg-gradient-to-t dark:from-indigo-900 dark:via-indigo-700 dark:to-indigo-900 hover:cursor-pointer hover:brightness-105 rounded-full p-5"
     >
       <div
         className={`w-8 h-8 rounded-full  absolute  ${
