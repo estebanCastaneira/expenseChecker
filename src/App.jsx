@@ -1,8 +1,7 @@
-import "./App.css";
 import Header from "./assets/layouts/Header";
 import Form from "./assets/layouts/Form";
 import Table from "./assets/layouts/Table";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 function App() {
   const [expenses, setExpenses] = useState([]);
   return (

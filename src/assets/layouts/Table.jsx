@@ -2,6 +2,7 @@ import Edit from "../components/Edit";
 import Delete from "../components/Delete";
 import Money from "../components/Money";
 import Update from "../components/Update";
+import TableHeader from "../components/TableHeader";
 import { useState } from "react";
 function Table({ expenses, setExpenses }) {
   const [editing, setEditing] = useState({ available: false, id: "" });
@@ -17,9 +18,12 @@ function Table({ expenses, setExpenses }) {
     setExpenses([...expensesUpdate]);
   };
 
-  const handleEdit = (e, id) => {
+  const handleEdit = (e, id, expense) => {
     setClicked(!clicked);
     if (clicked) {
+      setNewExpense(expense.expense);
+      setNewAmount(expense.amount);
+      setNewExpiration(expense.expiration);
       setEditing({ available: !editing.available, id: id });
     } else {
       setEditing({ available: false, id: "" });
@@ -63,40 +67,7 @@ function Table({ expenses, setExpenses }) {
   };
   return (
     <table className="w-full table dark:bg-slate-800 dark:text-white border-4 dark:border-gray-600">
-      <thead className="table-header-group">
-        <tr>
-          <th
-            className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
-            scope="col"
-          >
-            Expense
-          </th>
-          <th
-            className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
-            scope="col"
-          >
-            Amount
-          </th>
-          <th
-            className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
-            scope="col"
-          >
-            Expiration
-          </th>
-          <th
-            className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
-            scope="col"
-          >
-            Status
-          </th>
-          <th
-            className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
-            scope="col"
-          >
-            <div className="flex justify-evenly">Actions</div>
-          </th>
-        </tr>
-      </thead>
+      <TableHeader expenses={expenses} setExpenses={setExpenses} />
       <tbody className="table-row-group ">
         {expenses &&
           expenses.map((expense, i) => (
@@ -150,7 +121,7 @@ function Table({ expenses, setExpenses }) {
                     editing={editing}
                     id={i}
                   />
-                  <Edit handleEdit={handleEdit} id={i} />
+                  <Edit handleEdit={handleEdit} expense={expense} id={i} />
                   <Money
                     handlePaid={handlePaid}
                     id={i}
