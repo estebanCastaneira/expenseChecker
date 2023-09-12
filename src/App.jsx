@@ -1,6 +1,6 @@
-import Header from "./assets/layouts/Header";
-import Form from "./assets/layouts/Form";
-import Table from "./assets/layouts/Table";
+import Header from "./components/Header";
+import Form from "./components/Form";
+import Table from "./components/Table";
 import { useState } from "react";
 function App() {
   const [expenses, setExpenses] = useState([]);
