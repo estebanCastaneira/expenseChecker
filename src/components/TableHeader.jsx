@@ -120,14 +120,14 @@ function TableHeader({ expenses, setExpenses }) {
           Expiration
         </th>
         <th
-          className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
+          className="table-cell border-2 bg-indigo-300 w-2/12 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
           scope="col"
           onClick={handlePaid}
         >
           Status
         </th>
         <th
-          className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600"
+          className="table-cell border-2 bg-indigo-300 w-4/12 dark:bg-slate-900 dark:border-gray-600"
           scope="col"
         >
           <div className="flex justify-evenly">Actions</div>

@@ -1,29 +1,29 @@
-@keyframes moveR{
-    from{
-        left: 4.5px;
-        background-color: #566297;
-    }
-    to{ 
-        left: 54px;
-        background-color: #ffead2;
-    }
+@keyframes moveR {
+  from {
+    left: 4.5px;
+    background-color: #566297;
+  }
+  to {
+    left: 59px;
+    background-color: #ffead2;
+  }
 }
-@keyframes moveL{
-    from{
-        left: 54px;
-        background-color: #ffead2;
-    }
-    to{
-        left: 4.5px;
-        background-color: #566297;
-    }
+@keyframes moveL {
+  from {
+    left: 59px;
+    background-color: #ffead2;
+  }
+  to {
+    left: 4.5px;
+    background-color: #566297;
+  }
 }
 .moveR {
-    animation: moveR 400ms ease forwards;
+  animation: moveR 400ms ease forwards;
 }
 .moveL {
-    animation: moveL 400ms ease forwards;
+  animation: moveL 400ms ease forwards;
 }
-.color{
-    color: #e5e563;
+.color {
+  color: #e5e563;
 }

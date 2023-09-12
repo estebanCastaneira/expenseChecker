@@ -1,8 +1,8 @@
-import Edit from "../components/Edit";
-import Delete from "../components/Delete";
-import Money from "../components/Money";
-import Update from "../components/Update";
-import TableHeader from "../components/TableHeader";
+import Edit from "./Edit";
+import Delete from "./Delete";
+import Money from "./Money";
+import Update from "./Update";
+import TableHeader from "./TableHeader";
 import { useState } from "react";
 function Table({ expenses, setExpenses }) {
   const [editing, setEditing] = useState({ available: false, id: "" });
