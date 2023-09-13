@@ -99,7 +99,7 @@ function TableHeader({ expenses, setExpenses }) {
     <thead className="table-header-group">
       <tr>
         <th
-          className="table-cell sm:w-3/12 underline border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
+          className="table-cell sm:w-2/12 underline border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
           scope="col"
           onClick={handleExpense}
         >

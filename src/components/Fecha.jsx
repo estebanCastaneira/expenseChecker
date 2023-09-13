@@ -32,9 +32,6 @@ function Fecha() {
       <p className="font-bold dark:text-white text-sm sm:text-lg ">
         {days[dayW].toUpperCase()}, {dayN} {months[month].toUpperCase()}, {year}
       </p>
-      {/* <p>
-        {dayN}-{month + 1}-{year}
-      </p>  TODO like a Hover*/}
     </div>
   );
 }
