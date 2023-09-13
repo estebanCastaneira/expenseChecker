@@ -66,17 +66,17 @@ function Table({ expenses, setExpenses }) {
     }
   };
   return (
-    <table className="w-full table dark:bg-slate-800 dark:text-white border-4 dark:border-gray-600">
+    <table className="w-full table text-xs sm:text-lg dark:bg-slate-800 dark:text-white border-4 dark:border-gray-600">
       <TableHeader expenses={expenses} setExpenses={setExpenses} />
       <tbody className="table-row-group ">
         {expenses &&
           expenses.map((expense, i) => (
             <tr className="text-center" key={i}>
-              <td className="p-2 table-cell border-2 dark:border-gray-600 relative">
-                {expense.expense}
+              <td className="p-1 sm:p-2 table-cell border-2 dark:border-gray-600 relative">
+                {editing.available && editing.id === i ? "" : expense.expense}
                 {editing.available && editing.id === i && (
                   <input
-                    className=" text-center dark:bg-slate-700 border-2 dark:border-white rounded-lg absolute left-5  w-5/6"
+                    className="text-center dark:bg-slate-700 border-2 dark:border-white rounded-md absolute inset-0 sm:left-2 top-1 flex items-center justify-center w-11/12"
                     type="text"
                     defaultValue={expense.expense}
                     onChange={handleOnChange}
@@ -85,11 +85,11 @@ function Table({ expenses, setExpenses }) {
                   />
                 )}
               </td>
-              <td className="p-2 table-cell border-2 dark:border-gray-600 relative">
-                ${expense.amount}
+              <td className="p-1 sm:p-2 table-cell border-2 dark:border-gray-600 relative">
+                {editing.available && editing.id === i ? "" : expense.amount}
                 {editing.available && editing.id === i && (
                   <input
-                    className="text-center dark:bg-slate-700 border-2 dark:border-white rounded-lg absolute left-3  w-5/6"
+                    className="text-center dark:bg-slate-700 border-2 dark:border-white rounded-md absolute inset-0 sm:left-2 top-1 flex items-center justify-center  w-5/6"
                     type="number"
                     defaultValue={expense.amount}
                     onChange={handleOnChange}
@@ -98,11 +98,13 @@ function Table({ expenses, setExpenses }) {
                   />
                 )}
               </td>
-              <td className="p-2 table-cell border-2 dark:border-gray-600 relative">
-                {expense.expiration.split("-").reverse().join("-")}
+              <td className="p-1 sm:p-2 table-cell border-2 dark:border-gray-600 relative">
+                {editing.available && editing.id === i
+                  ? ""
+                  : expense.expiration.split("-").reverse().join("-")}
                 {editing.available && editing.id === i && (
                   <input
-                    className="text-center dark:bg-slate-700 border-2 dark:border-white rounded-lg absolute left-5  w-5/6"
+                    className="text-center dark:bg-slate-700 border-2 dark:border-white rounded-md absolute  top-1 flex items-center justify-center w-11/12"
                     type="date"
                     defaultValue={expense.expiration}
                     onChange={handleOnChange}
@@ -111,10 +113,10 @@ function Table({ expenses, setExpenses }) {
                   />
                 )}
               </td>
-              <td className="p-2 table-cell border-2 dark:border-gray-600 relative">
+              <td className="p-1 sm:p-2 table-cell border-2 dark:border-gray-600 relative">
                 {expense.isPaid ? "Paid" : "Not Paid"}
               </td>
-              <td className="p-2 table-cell border-2 dark:border-gray-600">
+              <td className="p-1 sm:p-2 table-cell border-2 dark:border-gray-600">
                 <div className="flex justify-evenly">
                   <Update
                     handleUpdate={handleUpdate}

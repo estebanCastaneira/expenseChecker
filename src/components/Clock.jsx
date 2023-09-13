@@ -16,7 +16,7 @@ function Clock() {
   const seconds = time.getSeconds();
   return (
     <div className="w-16">
-      <p className="font-bold dark:text-white">
+      <p className="font-bold text-sm sm:text-lg dark:text-white">
         {hours}:{minutes < 10 ? "0" + minutes : minutes}:
         {seconds < 10 ? "0" + seconds : seconds}
       </p>

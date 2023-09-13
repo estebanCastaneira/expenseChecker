@@ -1,7 +1,7 @@
 import { useState } from "react";
 function TableHeader({ expenses, setExpenses }) {
   const [expSorted, setExpSorted] = useState(false);
-  const [amoSorted, setAmoSorted] = useState(false);
+  const [amountSorted, setAmountSorted] = useState(false);
   const [expiSorted, setExpiSorted] = useState(false);
 
   const handleExpense = () => {
@@ -35,13 +35,13 @@ function TableHeader({ expenses, setExpenses }) {
     return setExpenses([...expensesSorted]);
   };
   const handleAmount = () => {
-    if (!amoSorted) {
+    if (!amountSorted) {
       const expensesSorted = expenses.sort((a, b) => {
         const amountA = a.amount;
         const amountB = b.amount;
         return amountA - amountB;
       });
-      setAmoSorted(true);
+      setAmountSorted(true);
       return setExpenses([...expensesSorted]);
     }
     const expensesSorted = expenses.sort((a, b) => {
@@ -49,7 +49,7 @@ function TableHeader({ expenses, setExpenses }) {
       const amountB = b.amount;
       return amountB - amountA;
     });
-    setAmoSorted(false);
+    setAmountSorted(false);
     return setExpenses([...expensesSorted]);
   };
   const handleExpiration = () => {
@@ -99,35 +99,35 @@ function TableHeader({ expenses, setExpenses }) {
     <thead className="table-header-group">
       <tr>
         <th
-          className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
+          className="table-cell sm:w-3/12 underline border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
           scope="col"
           onClick={handleExpense}
         >
           Expense
         </th>
         <th
-          className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
+          className="table-cell underline border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
           scope="col"
           onClick={handleAmount}
         >
           Amount
         </th>
         <th
-          className="table-cell border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
+          className="table-cell sm:w-2/12 underline border-2 bg-indigo-300 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
           scope="col"
           onClick={handleExpiration}
         >
           Expiration
         </th>
         <th
-          className="table-cell border-2 bg-indigo-300 w-2/12 dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
+          className="table-cell sm:w-2/12 underline border-2 bg-indigo-300  dark:bg-slate-900 dark:border-gray-600 hover:cursor-pointer"
           scope="col"
           onClick={handlePaid}
         >
           Status
         </th>
         <th
-          className="table-cell border-2 bg-indigo-300 w-4/12 dark:bg-slate-900 dark:border-gray-600"
+          className="table-cell underline border-2 bg-indigo-300 w-4/12 dark:bg-slate-900 dark:border-gray-600"
           scope="col"
         >
           <div className="flex justify-evenly">Actions</div>

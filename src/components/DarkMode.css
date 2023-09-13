@@ -4,13 +4,13 @@
     background-color: #566297;
   }
   to {
-    left: 50px;
+    left: 60px;
     background-color: #ffead2;
   }
 }
 @keyframes moveL {
   from {
-    left: 50px;
+    left: 60px;
     background-color: #ffead2;
   }
   to {
