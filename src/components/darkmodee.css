@@ -1,20 +1,20 @@
 @keyframes moveR {
   from {
-    left: 4.5px;
+    left: 4%;
     background-color: #566297;
   }
   to {
-    left: 60px;
+    left: 62.5%;
     background-color: #ffead2;
   }
 }
 @keyframes moveL {
   from {
-    left: 60px;
+    left: 62.5%;
     background-color: #ffead2;
   }
   to {
-    left: 4.5px;
+    left: 4%;
     background-color: #566297;
   }
 }

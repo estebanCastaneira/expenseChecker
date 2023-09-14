@@ -1,7 +1,7 @@
 import Sun from "./Sun";
 import Moon from "./Moon";
 import { useState } from "react";
-import "./DarkMode.css";
+import "./darkmodee.css";
 function DarkMode() {
   const [darkMode, setDarkMode] = useState(false);
 
