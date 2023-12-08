@@ -1,23 +1,23 @@
-import Sun from "./Sun";
-import Moon from "./Moon";
-import { useState } from "react";
-import "./darkmodee.css";
+import Sun from "./Sun"
+import Moon from "./Moon"
+import { useState } from "react"
+
 function DarkMode() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false)
 
   const handleOnClik = (e) => {
-    const switchWidth = e.currentTarget.offsetWidth;
-    const clickX = e.clientX - e.currentTarget.getBoundingClientRect().left;
-    const isLeftHalf = clickX <= switchWidth / 2;
-    setDarkMode(isLeftHalf);
-  };
+    const switchWidth = e.currentTarget.offsetWidth
+    const clickX = e.clientX - e.currentTarget.getBoundingClientRect().left
+    const isLeftHalf = clickX <= switchWidth / 2
+    setDarkMode(isLeftHalf)
+  }
 
   if (darkMode) {
-    window.document.documentElement.classList.add("dark");
-    window.document.body.classList.add("dark:bg-slate-900");
+    window.document.documentElement.classList.add("dark")
+    window.document.body.classList.add("dark:bg-slate-900")
   } else {
-    window.document.documentElement.classList.remove("dark");
-    window.document.body.classList.remove("dark:bg-slate-900");
+    window.document.documentElement.classList.remove("dark")
+    window.document.body.classList.remove("dark:bg-slate-900")
   }
 
   return (
@@ -33,7 +33,7 @@ function DarkMode() {
       <Moon fill={darkMode ? "yellow" : "white"} />
       <Sun fill={!darkMode ? "yellow" : "#dea53b"} />
     </div>
-  );
+  )
 }
 
-export default DarkMode;
+export default DarkMode
